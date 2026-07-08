@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>台灣生物多樣性地圖</title>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 <style>
 body{
     margin:0;
-    font-family:Arial,sans-serif;
+    font-family:Arial;
 }
 
 h1{
-    background:#2E8B57;
+    background:green;
     color:white;
-    text-align:center;
-    padding:15px;
     margin:0;
+    padding:15px;
+    text-align:center;
 }
 
 #map{
     height:90vh;
 }
 </style>
+
 </head>
 
 <body>
 
-<h1>🌿 台灣生物多樣性地圖</h1>
+<h1>🌿 台灣生物多樣性地圖 🌿</h1>
 
 <div id="map"></div>
 
@@ -38,30 +40,30 @@ h1{
 
 <script>
 
-var map = L.map('map').setView([23.7,121],7);
+var map = L.map('map').setView([23.8,121],7);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:18,
-    attribution:'© OpenStreetMap'
+    maxZoom:18
 }).addTo(map);
 
 // 阿里山
 L.marker([23.51,120.80]).addTo(map)
-.bindPopup("<h3>🌲 阿里山</h3><p>🐦 帝雉<br>🌸 台灣一葉蘭</p>");
+.bindPopup("🌲 阿里山<br>🐦 帝雉");
 
 // 玉山
 L.marker([23.47,120.96]).addTo(map)
-.bindPopup("<h3>🏔️ 玉山</h3><p>🐻 台灣黑熊</p>");
+.bindPopup("🐻 玉山<br>台灣黑熊");
 
 // 墾丁
 L.marker([21.95,120.78]).addTo(map)
-.bindPopup("<h3>🌊 墾丁</h3><p>🐢 綠蠵龜<br>🪸 珊瑚礁</p>");
+.bindPopup("🐢 墾丁<br>綠蠵龜");
 
 // 台江
 L.marker([23.02,120.14]).addTo(map)
-.bindPopup("<h3>🦆 台江國家公園</h3><p>黑面琵鷺</p>");
+.bindPopup("🦆 台江<br>黑面琵鷺");
 
 </script>
 
 </body>
+
 </html>
