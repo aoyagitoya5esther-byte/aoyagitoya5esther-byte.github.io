@@ -1,0 +1,27 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+header{
+    background:#2E8B57;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header p{
+    margin:8px 0 0 0;
+    font-size:18px;
+}
+
+#map{
+    width:100%;
+    height:calc(100vh - 100px);
+}
